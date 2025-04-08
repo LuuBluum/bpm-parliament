@@ -1,0 +1,11 @@
+﻿l_english:
+ law_no_elections: "No Elections"
+ law_no_elections: "Elections are not held in this country."
+ law_electoral_college: "Electoral College"
+ law_electoral_college_desc: "An indirect voting system whereby intermediary electors determine the results of an election. These electors are not bound by the popular vote in their district, and therefore election results are less likely to reflect the popular vote and be more beneficial to entrenched institutional interests."
+ law_first_past_the_post: "First Past The Post"
+ law_first_past_the_post_desc: "An winner-takes-all system whereby the plurality winner in each district wins all of that district's seats. This tends to create strong single-party governments, but often leads to two-party systems and can often lead to smaller parties being underrepresented."
+ law_proportional_representation: "Proportional Representation"
+ law_proportional_representation_desc: "A system where parties are represented in direct proportion to their vote share. This tends to lead to highly fragmented parliaments and frequent coalition governments, but can often encourage compromise, preventing a small group of parties from making all political decisions."
+ lawgroup_voting_system: "Voting System"
+ lawgroup_voting_system_desc: "The system the country uses to apportion seats to parties and factions in an elected body."

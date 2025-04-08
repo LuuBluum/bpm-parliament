@@ -1,4 +1,4 @@
-bpmparl_conditional_update_seats = {
+﻿bpmparl_conditional_update_seats = {
 
     set_variable = bpm_has_election_results
     set_variable = {
@@ -13,10 +13,34 @@ bpmparl_conditional_update_seats = {
 }
 
 bpmparl_update_parliament_seats_with_system = {
-    set_variable = {
-        name = bpm_election_system
-        value = flag:$SYSTEM$
+    if = {
+        limit = {
+            has_law = law_type:law_electoral_college 
+        }
+        set_variable = {
+            name = bpm_election_system
+            value = flag:electoral_college
+        }
     }
+    else_if = {
+        limit = {
+            has_law = law_type:law_first_past_the_post
+        }
+        set_variable = {
+            name = bpm_election_system
+            value = flag:fptp
+        }
+    }
+    else_if = {
+        limit = {
+            has_law = law_type:law_proportional_representation
+        }
+        set_variable = {
+            name = bpm_election_system
+            value = flag:proportional
+        }
+    }
+    
     bpmparl_update_parliament_seats = yes
 }
 
@@ -96,9 +120,7 @@ bpmparl_update_parliament_seats = {
     }
     else_if = {
         limit = {
-            # default use majoritarian fptp
-            #var:bpm_election_system = flag:fptp
-            always = yes
+            var:bpm_election_system = flag:fptp
         }
         every_scope_state = {
             limit = {

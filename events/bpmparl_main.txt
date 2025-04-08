@@ -24,7 +24,7 @@ bpmparl_utils.1 = {
 	}
 
 	immediate = {
-		bpmparl_update_parliament_seats = yes
+		bpmparl_update_parliament_seats_with_system = yes
 	}
 
     option = {
