@@ -16,7 +16,7 @@ bpmparl_set_party_vote = {
     bpmparl_set_party_vote_subp = { COLOR = black PARTY = anarchist }    
     if = {
         limit = {
-            any_active_party = { count = 0 }
+            has_law = law_type:law_no_elections
         }
         every_interest_group = { 
             limit = {
