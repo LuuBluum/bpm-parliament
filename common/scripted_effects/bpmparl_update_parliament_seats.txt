@@ -40,6 +40,15 @@ bpmparl_update_parliament_seats_with_system = {
             value = flag:proportional
         }
     }
+    else_if = {
+        limit = {
+            has_law = law_type:law_no_elections
+        }
+        set_variable = {
+            name = bpm_election_system
+            value = flag:none
+        }
+    }
     
     bpmparl_update_parliament_seats = yes
 }
@@ -176,9 +185,7 @@ bpmparl_update_parliament_seats = {
 
     if = {
         limit = {
-            any_active_party = {
-                count = 0
-            }
+            var:bpm_election_system = flag:none
         }
         set_variable = {
             name = bpm_allocated_seats
